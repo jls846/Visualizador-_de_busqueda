@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Visualizador de Algoritmos de Búsqueda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Visualizador de Algoritmos de Búsqueda</h1>
+    <p>Compara BFS, DFS, Greedy y A* en tiempo real</p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <div class="mode-selector">
+        <button id="mode-start" class="mode-btn active" data-mode="start">🟢 Inicio</button>
+        <button id="mode-end" class="mode-btn" data-mode="end">🔴 Fin</button>
+        <button id="mode-wall" class="mode-btn" data-mode="wall">⬛ Obstáculo</button>
+        <button id="mode-erase" class="mode-btn" data-mode="erase">🧹 Borrar</button>
+      </div>
+
+      <div class="algo-buttons">
+        <button id="btn-bfs" class="algo-btn">BFS</button>
+        <button id="btn-dfs" class="algo-btn">DFS</button>
+        <button id="btn-greedy" class="algo-btn">Greedy</button>
+        <button id="btn-astar" class="algo-btn">A*</button>
+      </div>
+
+      <div class="controls">
+        <button id="btn-clear" class="control-btn">🗑️ Limpiar Todo</button>
+        <button id="btn-clear-path" class="control-btn">🧹 Limpiar Ruta</button>
+        <label>
+          Velocidad:
+          <input type="range" id="speed" min="1" max="100" value="60">
+        </label>
+      </div>
+    </div>
+
+    <div id="grid"></div>
+
+    <div class="legend">
+      <div><span class="color-box start"></span> Inicio</div>
+      <div><span class="color-box end"></span> Fin</div>
+      <div><span class="color-box wall"></span> Obstáculo</div>
+      <div><span class="color-box visited"></span> Explorado</div>
+      <div><span class="color-box path"></span> Ruta óptima</div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
